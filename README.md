@@ -1,19 +1,5 @@
 # Geometría: AreaPoligono en siete grupos de lenguajes
 
-Entrega académica basada en los puntos visibles 3–5 de la imagen. Hay ocho implementaciones: C y C++ se entregan por separado, además de Python, PHP, JavaScript, Java, Go y Rust. Cada una es una biblioteca reutilizable con pruebas. El DSL usa una gramática ANTLR4 real y un consumidor Python del parser generado.
-
-## Alcance y supuestos
-
-La imagen enumera implementación, DSL `.g4`, pruebas unitarias, biblioteca `geometria` y fundamentación/demostración de SOLID con subrutinas de `AreaPoligono`. Repite los números 4 y 5 y rotula Rust como “4.g.”; se conserva su contenido sin inferir tareas adicionales de esa numeración.
-
-**Los puntos 1 y 2 no aparecen.** No se reconstruyen como requisitos confirmados. Para poder desarrollar se adoptan estos supuestos revisables:
-
-- El objetivo operativo es calcular el área de un polígono simple, plano, sin agujeros, cuyos vértices llegan ordenados a lo largo del contorno.
-- Se elige la fórmula del cordón y aritmética de doble precisión, sin bibliotecas geométricas externas.
-- Se define una API de puntos `(x,y)`, un contrato común y un DSL mínimo de declaración/consulta. Sus nombres, sintaxis, validaciones y casos límite son decisiones de esta solución.
-- SOLID se fundamenta y demuestra de forma ejecutable en Python; las demás versiones implementan el mismo núcleo matemático. No se afirma que ocho funciones aisladas demuestren por sí solas los cinco principios de diseño orientado a objetos.
-
-No hay evidencia de requisitos sobre interfaz gráfica, geodesia, agujeros, intersecciones, formato de archivo obligatorio, versión de lenguaje, frameworks de prueba o parser en cada lenguaje. La nota de envío de la imagen no implica un envío automático: esta entrega queda preparada localmente.
 
 ## Organización
 
@@ -82,7 +68,6 @@ cargo test --offline
 cd ..
 ```
 
-Estas suites usan `unittest`, `node:test`, `testing` y Cargo donde existen herramientas nativas; C/C++, PHP y Java usan comprobaciones que fallan con salida no exitosa, sin frameworks descargables y sin depender de aserciones desactivables.
 
 ## Uso de la biblioteca
 
@@ -122,4 +107,3 @@ No se incluye el JAR ni el runtime en el paquete. La gramática y las reglas sem
 5. [Verificación real y pendientes del entorno](docs/VERIFICACION.md).
 6. [Trazabilidad de la imagen a los entregables](docs/TRAZABILIDAD.md).
 
-La imagen de origen está en `docs/actividad.png`. Ninguna decisión relativa a los puntos ausentes se presenta como mandato del docente.
