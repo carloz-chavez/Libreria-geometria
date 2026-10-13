@@ -1,0 +1,11 @@
+grammar Geometria;
+programa : sentencia* EOF;
+sentencia : declaracion | consulta;
+declaracion : 'poligono' ID '=' '[' punto ',' punto ',' punto (',' punto)* ']' ';';
+consulta : 'area' '(' ID ')' ';';
+punto : '(' numero ',' numero ')';
+numero : ('+' | '-')? NUM;
+NUM : ([0-9]+ ('.' [0-9]*)? | '.' [0-9]+) ([eE] [+-]? [0-9]+)?;
+ID : [a-zA-Z_] [a-zA-Z_0-9]*;
+COMENTARIO : '//' ~[\r\n]* -> skip;
+WS : [ \t\r\n]+ -> skip;

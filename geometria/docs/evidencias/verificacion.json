@@ -1,0 +1,171 @@
+[
+  {
+    "suite": "Python",
+    "estado": "PASA",
+    "faltantes": [],
+    "pasos": [
+      {
+        "comando": [
+          "C:\\Users\\style\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe",
+          "-m",
+          "unittest",
+          "discover",
+          "-s",
+          "python",
+          "-v"
+        ],
+        "codigo": 0,
+        "salida": "test_casos_y_sustitucion (test_geometria.PruebasArea.test_casos_y_sustitucion) ... ok\ntest_invalidos (test_geometria.PruebasArea.test_invalidos) ... ok\ntest_inyeccion_sin_herencia (test_geometria.PruebasArea.test_inyeccion_sin_herencia) ... ok\ntest_orientacion_traslacion_escala (test_geometria.PruebasArea.test_orientacion_traslacion_escala) ... ok\n\n----------------------------------------------------------------------\nRan 4 tests in 0.001s\n\nOK\n"
+      }
+    ]
+  },
+  {
+    "suite": "SOLID",
+    "estado": "PASA",
+    "faltantes": [],
+    "pasos": [
+      {
+        "comando": [
+          "C:\\Users\\style\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe",
+          "python/demo_solid.py"
+        ],
+        "codigo": 0,
+        "salida": "SRP: validación y cálculo pueden usarse sin lectura ni impresión.\nOCP: Abanico amplía el cálculo sin cambiar ServicioArea.\nLSP: ambas estrategias conservan resultados y precondiciones.\nISP: el cliente solo necesita calcular; no necesita imprimir ni guardar.\nDIP: el servicio recibe su dependencia y admite un doble para aislarlo.\n"
+      }
+    ]
+  },
+  {
+    "suite": "JavaScript",
+    "estado": "PASA",
+    "faltantes": [],
+    "pasos": [
+      {
+        "comando": [
+          "node",
+          "--test",
+          "javascript/geometria.test.js"
+        ],
+        "codigo": 0,
+        "salida": "✔ rectangulo (4.0079ms)\n✔ horario (0.1961ms)\n✔ triangulo (0.1477ms)\n✔ concavo (0.1147ms)\n✔ negativos (0.3863ms)\n✔ colineal (0.0983ms)\n✔ cierre (0.1067ms)\n✔ fraccion (0.3102ms)\n✔ invalidos (1.3454ms)\n✔ propiedades (0.4978ms)\nℹ tests 10\nℹ suites 0\nℹ pass 10\nℹ fail 0\nℹ cancelled 0\nℹ skipped 0\nℹ todo 0\nℹ duration_ms 248.8731\n"
+      }
+    ]
+  },
+  {
+    "suite": "C",
+    "estado": "FALLA",
+    "faltantes": [],
+    "pasos": [
+      {
+        "comando": [
+          "gcc",
+          "-std=c11",
+          "-Wall",
+          "-Wextra",
+          "-Werror",
+          "-pedantic",
+          "c/geometria.c",
+          "c/test_geometria.c",
+          "-lm",
+          "-o",
+          "C:\\Users\\style\\Documents\\Codex\\2026-10-13\\referenced-chatgpt-conversation-this-is-an\\outputs\\geometria\\build\\test_c.exe"
+        ],
+        "error": "[WinError 623] {Reasignación no válida del archivo DLL del sistema}\r\nEl archivo DLL del sistema %hs se ha reasignado en la memoria. La aplicación no funcionará correctamente.\r\nLa reasignación ocurrió porque la DLL %hs ocupa un intervalo de direcciones reservado para las DLL del sistema de Windows. Debe ponerse en contacto con el fabricante que proporciona la DLL para obtener una nueva"
+      }
+    ]
+  },
+  {
+    "suite": "C++",
+    "estado": "FALLA",
+    "faltantes": [],
+    "pasos": [
+      {
+        "comando": [
+          "g++",
+          "-std=c++17",
+          "-Wall",
+          "-Wextra",
+          "-Werror",
+          "-pedantic",
+          "cpp/test_geometria.cpp",
+          "-o",
+          "C:\\Users\\style\\Documents\\Codex\\2026-10-13\\referenced-chatgpt-conversation-this-is-an\\outputs\\geometria\\build\\test_cpp.exe"
+        ],
+        "error": "[WinError 623] {Reasignación no válida del archivo DLL del sistema}\r\nEl archivo DLL del sistema %hs se ha reasignado en la memoria. La aplicación no funcionará correctamente.\r\nLa reasignación ocurrió porque la DLL %hs ocupa un intervalo de direcciones reservado para las DLL del sistema de Windows. Debe ponerse en contacto con el fabricante que proporciona la DLL para obtener una nueva"
+      }
+    ]
+  },
+  {
+    "suite": "Java",
+    "estado": "PASA",
+    "faltantes": [],
+    "pasos": [
+      {
+        "comando": [
+          "javac",
+          "-encoding",
+          "UTF-8",
+          "-d",
+          "C:\\Users\\style\\Documents\\Codex\\2026-10-13\\referenced-chatgpt-conversation-this-is-an\\outputs\\geometria\\build\\java",
+          "java/Geometria.java",
+          "java/TestGeometria.java"
+        ],
+        "codigo": 0,
+        "salida": ""
+      },
+      {
+        "comando": [
+          "java",
+          "-cp",
+          "C:\\Users\\style\\Documents\\Codex\\2026-10-13\\referenced-chatgpt-conversation-this-is-an\\outputs\\geometria\\build\\java",
+          "TestGeometria"
+        ],
+        "codigo": 0,
+        "salida": "Java: todas las pruebas pasan\n"
+      }
+    ]
+  },
+  {
+    "suite": "PHP",
+    "estado": "NO_DISPONIBLE",
+    "faltantes": [
+      "php"
+    ],
+    "pasos": []
+  },
+  {
+    "suite": "Go",
+    "estado": "NO_DISPONIBLE",
+    "faltantes": [
+      "go"
+    ],
+    "pasos": []
+  },
+  {
+    "suite": "Rust",
+    "estado": "NO_DISPONIBLE",
+    "faltantes": [
+      "cargo"
+    ],
+    "pasos": []
+  },
+  {
+    "suite": "DSL",
+    "estado": "PASA",
+    "faltantes": [],
+    "pasos": [
+      {
+        "comando": [
+          "C:\\Users\\style\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe",
+          "-m",
+          "unittest",
+          "discover",
+          "-s",
+          "dsl",
+          "-v"
+        ],
+        "codigo": 0,
+        "salida": "test_ejemplo (test_dsl.PruebasDSL.test_ejemplo) ... ok\ntest_errores (test_dsl.PruebasDSL.test_errores) ... ok\ntest_signos_y_comentarios (test_dsl.PruebasDSL.test_signos_y_comentarios) ... ok\n\n----------------------------------------------------------------------\nRan 3 tests in 0.016s\n\nOK\n"
+      }
+    ]
+  }
+]
